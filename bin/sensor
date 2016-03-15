@@ -2,6 +2,7 @@
 
 var os = require( 'os' );
 
+setInterval( function() {
 process.stdout.write( JSON.stringify( {
   type: 'device',
   data: {
@@ -11,6 +12,7 @@ process.stdout.write( JSON.stringify( {
     'os_arch': os.arch()
   }
 }));
+}, 10000);
 
 setInterval( function () {
   var loadavg = os.loadavg();
